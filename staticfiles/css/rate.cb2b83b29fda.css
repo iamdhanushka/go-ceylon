@@ -1,0 +1,127 @@
+html {
+    background-color: rgb(203, 203, 209);
+  }
+
+.rating-wrapper{
+    margin:auto;
+    position:relative;
+    width:40%;
+    height: auto;
+    margin-top: 30px;   
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-color: white;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.24),
+      0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title{
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 30px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.subheading{
+    font-size: 18px;
+    margin-top: 7px;
+    display: inline-block;
+}
+
+.submit-btn{
+    margin-left: 50px;
+    margin-top: 10px;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(0, 21, 44);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+   
+}
+textarea{
+    resize: none;
+    margin-left: 30px;
+    border: 1px solid black;
+    width: 88%;
+    min-height: 100px;
+    overflow: auto;
+}
+
+.dropdown{
+    margin-left:40px;
+    padding: 10px 10px 10px 10px;
+}
+
+.text-field{
+    padding: 15px 20px;
+    border-radius: 0px;
+    background: rgba(255, 255, 255, 0.233);
+}
+
+
+@media  (max-width: 900px){
+    .rating-wrapper{
+        margin:auto;
+        width:90%;
+        height: auto;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        background-color: white;
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    textarea{
+        resize: none;
+        margin-left: 20px;
+        border: 1px solid black;
+        width: 85%;
+        min-height: 150px;
+        overflow: auto;
+    }
+
+    .title{
+        font-size: 15px;
+        margin-left: 40px;
+        margin-top: 30px;
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+    }
+    
+    .subheading{
+        font-size: 17px;
+        margin-top: 7px;
+        display: inline-block;
+    }
+
+    .dropdown{
+        margin-left:30px;
+        padding: 10px 10px 10px 10px;
+    }
+    
+    .text-field{
+        padding: 15px 20px;
+        border-radius: 0px;
+        background: rgba(255, 255, 255, 0.233);
+    }
+
+    .submit-btn{
+        margin-left: 40px;
+        margin-top: 5px;
+        border: none;
+        padding: 12px 18px;
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: bold;
+        background: rgb(0, 21, 44);
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+       
+    }
+    
+}

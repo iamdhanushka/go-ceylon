@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon-32x32.png' %}" type="image/x-icon">
+    
+</head>
+
+<style>
+.errorlist li{
+  color: rgb(190, 47, 47);
+  font-size: 15px;
+}
+</style>
+
+<body>
+
+    <title>Sign In | Sign Up</title>
+
+
+<div class="login-wrap">
+    <div class="login-html">
+        <div class = "home-btn"><a href="{% url 'home-view' %}"><input type="image" src="{% static 'img/home-button.png' %}" name="submit" width="65" height="auto" alt="Home"/></a>  </div>
+        <input id="tab-1" type="radio" name="tab" class="sign-in" onclick="redirectPage()" checked><label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-form">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user"  class="label">Username</label>
+                        <input name="username" id="user"  type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input name="password" id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <button type="submit" class="button" value="Sign In">Sign In</button>
+                    </div>
+                    {% for message in messages %}
+                        <p style="color: rgb(190, 47, 47);">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            </form>
+            
+            
+            <div class="sign-up-htm">
+                <form role="form" method="POST" action="{% url 'register-view' %}">
+                    {% csrf_token %}
+                    <div class="group">
+                        <label for="pass" class="label">Username</label>
+                        <input name="username" id="pass" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input name="password1" id="pass" type="password" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Re-enter Password</label>
+                        <input name="password2" id="pass" type="password" class="input">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    {{ form.errors }}
+                    {% if msg %}
+                        <p style="color: rgb(84, 218, 79);">{{msg}}</p>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% if form.errors or msg%}
+<script>
+    document.getElementById("tab-2").checked = true;
+
+</script>
+{% endif %}
+
+
+
+<script>
+    function redirectPage(){
+        window.location.href = "{% url 'login-view' %}";
+    }
+</script>
+
+</body>
+
+</html>

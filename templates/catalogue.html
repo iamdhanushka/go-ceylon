@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/catalogue.css' %}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+
+<body>
+
+  <title>Catalogue</title>
+
+  <div class="main">
+    <h1>LOCATIONS</h1>
+    <ul class="cards">
+      {% for i in destinations %}
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="{{ i.image.url }}"></div>
+          <div class="card_content">
+            <h2 class="card_title">{{ i.name }}</h2>
+            <h3 style="font-weight: 600;">Rating : <span style="color: rgb(255, 174, 0); font-weight: 600;">{{ i.average_rate }}</span></h3>
+            <hr>
+            <p class="card_text">{{ i.description|truncatechars:220 }} </p>
+            <a href="{% url 'destination-view' i.id %}"><button class="btn card_btn">Read More</button></a>
+          </div>
+        </div>
+      </li> 
+      {% endfor %} 
+    </ul>
+  </div>
+</body>
+
+</html>
+
+  
+    
+{% endblock %}

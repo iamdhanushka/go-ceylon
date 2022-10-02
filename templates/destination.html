@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/destination.css' %}">
+    
+    
+</head>
+
+<body>
+
+  <title>Destination</title>
+
+<div class="pd-wrap">
+  <div class="container">
+    <div class="heading-section">
+      <h2>{{ destination.name }}</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="item1">
+        <div id="slider" class="owl-carousel product-slider">
+          {% for d in dImages%}
+            <div class="item">
+              <div class="card_image">
+                <img style="height: 340px; object-fit: cover;" src="{{ d.images.url }}">
+              </div>
+            </div>
+          {% endfor%}
+        </div>
+        <div id="thumb" class="owl-carousel product-thumb">
+          {% for d in dImages%}
+          <div class="item">
+            <img src="{{ d.images.url }}"/ style="object-fit:cover; height: 100px;">
+          </div>
+          {% endfor%}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="product-dtl">
+        <div class="product-info">
+          <div class="reviews-counter">
+            <div class="star-ratings-css">
+              <div class="star-ratings-css-top" id="div_id">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              </div>
+            <span><b>{{review_count}} Reviews</b> </span>
+            <span><br>{{destination.average_rate}} / 5 </span>
+          </div>
+        </div>
+        <p>
+          {{ destination.description| linebreaks }}
+        </p>
+        <hr>
+        <div class="explore">
+          <a href="{{ maps_url }}" target="_blank"><img src="{% static 'img/location.svg' %}"></a>
+        </div>
+      </div>
+    </div>
+    <div class="product-info-tabs ">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        
+        <li class="nav-item">
+          <a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="true">Reviews ({{review_count}}) </a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+
+        <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+          
+          {%for r in reviews%}
+          <!--<div class="comment">
+            <p class="mb-20"> {{r.text}}</p>
+          </div>-->
+          <div class="d-flex align-items-start flex-column comment-tab"> 
+            <p class="comment-header"><strong>{{ r.user.username|capfirst }}</strong></p>
+            <p class="comment-content">{{ r.text }}</p>
+            <small class="mt-auto comment-date">{{ r.created_at|date:"d/m/Y" }}</small>
+        </div>
+          {% endfor %}
+          <button class="round-black-btn"><a href="{% url 'rate-destination' destination.id %}" class="'review-text">Write a Review</a></button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+</body>
+
+<script src="{% static 'js/destination.js' %}"></script>
+
+<script>
+
+  var ave_rate = '{{destination.average_rate}}';
+  calculated_value = (ave_rate/5) * 100;
+  final_value = calculated_value.toString() + '%';
+  document.getElementById("div_id").style.width = final_value;
+  console.log(final_value);
+
+</script>
+
+</html>
+
+{% endblock %}

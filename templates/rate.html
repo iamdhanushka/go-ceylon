@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/rate.css' %}">
+
+
+</head>
+
+<body>
+
+  <title>Rating</title>
+  
+  <div class="rating-wrapper">
+    <div class="title">
+      <h2>Write your review for:</h2>
+      <span class="subheading">{{ destination.name }}</span>
+    </div>
+    <form class="review-form" role="form" method="POST" action="">
+      {% csrf_token %}
+      <div class="input-field review-form dropdown">
+        {{ form.rate }}
+      </div>
+      <div class="input-field review-form text-field">
+        {{ form.text }}
+      </div>
+      <button class="submit-btn" type="submit" name="action0" class="waves-effect- waves-light btn">Submit</button>
+    </form>
+  </div>
+
+</body>
+
+<script> document.getElementById("id_rate").value = "3"; </script>
+
+</html>
+
+{% endblock %}

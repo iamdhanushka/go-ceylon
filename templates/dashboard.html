@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard2.css' %}" />
+  
+
+</head>
+
+<body>
+  <title>Translate</title>
+
+  <div class="form-wrapper">
+    <div class="title" style='color:black'>Get Images & Documents with Sinhala Text Translated</div>
+    <div class="step step1">Step 1</div>
+    <div class="instructions" ><span> Select the Image that contains Sinhala Text </span><br><br> Then Click Upload</div><br>
+      <div>
+        <p class="accuracy-info">For Better Accuracy:</p>
+        <ul class="info-list">
+          <li>Try to include as little backround elements as possible</li>
+          <li>Use a clear image</li>
+        </ul>  
+      </div>
+
+      <form method="POST" action="" enctype="multipart/form-data">
+        <div class="filechooser">
+          {% csrf_token %}
+          {{ form.user_img }}  
+        </div>
+        
+        <button type='submit' class="link" id="submit_butn" onclick="clicked()" >Upload</button>
+      </form>
+      <div id="instructions2" style="display: none">
+        <br>
+        <hr>
+        <div class="step step2">Step 2</div>
+        <div class="instructions process-element">Please Wait <span style='color: rgb(245, 86, 86)'>a few seconds</span> while we Process your Image..</div>
+      </div>
+  </div>
+</div>
+</body>
+
+<script>
+
+
+  function clicked(){
+    if(document.getElementById("id_user_img").value){
+      document.getElementById("instructions2").style.display = "block";
+    }
+  }
+   
+</script>
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+
+</head>
+
+<body>
+
+  <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
+    <div class="item active background a">
+      <div class="imagemain"></div>
+      <div class="col-xs-12 buttons explore">
+        <a href="{% url 'dashboard-view' %}"><button type="button" class="btn btn-lg explorebtn">TRANSLATE</button></a>
+        <a href="{% url 'catalogue-view' %}"><button type="button" class="btn btn-lg explorebtn">FIND A PLACE</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="inner-container">
+      <h1>Our Aim</h1>
+      <p class="text">
+        We at GoCeylon hope to enhance your travel experience through our numerous available features. You can browse our 
+        well researched catalogue of beautiful tourist destinations within Sri Lanka, get our pick of the best places to 
+        visit or even get help better understanding the Sri Lankan environment through our Translation Page.
+      </p>
+      <div class="skills">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+<script src="{% static 'js/home.js' %}"></script>
+
+
+
+
+</html>
+
+{% endblock %}

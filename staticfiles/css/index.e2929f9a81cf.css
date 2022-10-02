@@ -1,0 +1,152 @@
+html,
+body {
+  margin: 0;
+}
+
+.image {
+  padding: 260px 0px;
+  background-image: url("/static/img/GoCeylon.52d5f465bb9a.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+  background-size: 35%;
+  
+}
+
+body {
+    background: #eef1f3;
+  }
+  
+  @-webkit-keyframes loader {
+    0% {
+      width: 0;
+    }
+    20% {
+      width: 10%;
+    }
+    25% {
+      width: 24%;
+    }
+    43% {
+      width: 41%;
+    }
+    56% {
+      width: 50%;
+    }
+    66% {
+      width: 52%;
+    }
+    71% {
+      width: 60%;
+    }
+    75% {
+      width: 76%;
+    }
+    94% {
+      width: 86%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes loader {
+    0% {
+      width: 0;
+    }
+    20% {
+      width: 10%;
+    }
+    25% {
+      width: 24%;
+    }
+    43% {
+      width: 41%;
+    }
+    56% {
+      width: 50%;
+    }
+    66% {
+      width: 52%;
+    }
+    71% {
+      width: 60%;
+    }
+    75% {
+      width: 76%;
+    }
+    94% {
+      width: 86%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  .progress-bar {
+    border-radius: 60px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: -40px;
+  }
+  .progress-bar span {
+    display: block;
+  }
+  
+  .bar {
+    background: rgba(0, 0, 0, 0.075);
+  }
+  
+  .progress {
+    -webkit-animation: loader 2s ease infinite;
+            animation: loader 2s ease infinite;
+    background: #1F727E;
+    color: #fff;
+    padding: 5px;
+    width: 0;
+  }
+  
+  .progress-bar {
+    left: 50%;
+    max-width: 30%;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+
+  .team {
+    font-family: Arial, Helvetica, sans-serif;
+    left: 50%;
+    position: absolute;
+    top: 95%;
+    transform: translate3d(-50%, -50%, 0);
+   
+  }
+
+
+  
+@media only screen and (max-width: 720px) {
+    .image {
+      padding: 250px 0px;
+      margin: 20px;
+    }  
+  
+
+  .progress-bar {
+    left: 50%;
+    max-width: 60%;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    margin-top: -90px;
+  }
+
+  .image {
+    padding: 250px 0px;
+    background-image: url("/static/img/GoCeylon.52d5f465bb9a.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 85%;
+    
+    
+    
+  }
+
+}

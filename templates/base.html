@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/base.min.js' %}"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon-32x32.png' %}" type="image/x-icon">
+
+</head>
+
+<body>
+    <title>GoCeylon</title>
+    <div class="nav-wrapper1">
+        <div class="grad-bar"></div>
+        <nav class="navbar1">
+            <a href="{% url 'home-view' %}"> <img src="{% static 'img/GoCeylonV.svg' %}"></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav navbar1-button">
+                <li class="nav-item11"><a href="{% url 'home-view' %}">Home</a></li>
+                <li class="nav-item1"><a href="{% url 'dashboard-view' %}">Translate</a></li>
+                <li class="nav-item1"><a href="{% url 'catalogue-view' %}">Catalogue</a></li>
+                <li class="nav-item1"><a href="{% url 'recommendation-view' %}">Recommendation</a></li>
+                {% if request.user.is_authenticated %}
+                    <li class="nav-item2"><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li class="nav-item2"><a href="{% url 'login-view' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    </div>
+
+    
+
+   
+</body>
+
+
+{% block content %}
+    
+{% endblock %}
+
+
+<footer>
+    <p>Copyright &copy; 2022 <img src="{% static 'img/GoCeylonVLN.png' %}" alt="logo"> All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/base.js' %}"></script>
+
+</html>

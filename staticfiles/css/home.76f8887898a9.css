@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    height: max-content;
+}
+
+body{
+    position: relative;
+    padding-bottom: 60px;
+    min-height: 100vh;
+}
+
+.navbar-default .navbar-brand {
+	font-family: Verdana;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #ffffff;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: #ffffff;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover {
+	background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:focus {
+	background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ffffff;
+}
+
+.carousel .background {
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 800px;
+	margin-top: 1px;
+}
+
+@media (max-width: 991px) {
+	.carousel .background {
+		background-size: cover; /* To make the background image looks good */
+	}
+}
+
+.carousel .background.a {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.377), rgba(0, 0, 0, 0.048)),
+		url("/static/img/sea.999ed253f1f0.jpg");
+}
+
+.carousel .background.b {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+	url("/static/img/sea2.427c9258a379.jpg");
+}
+
+.carousel .background.c {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+	url("/static/img/sea.999ed253f1f0.jpg");
+}
+
+.carousel-fade .carousel-inner .item {
+	opacity: 0;
+	transition: opacity 0.5s; /* The 0.5s describes the duration to make the opacity from 0 to 1 */
+}
+
+.carousel-fade .carousel-inner .active {
+	opacity: 1;
+}
+
+/* CSS Hack to trigger GPU for smooth transition */
+@media all and (transform-3d), (-webkit-transform-3d) {
+	.carousel-fade .carousel-inner > .item.next,
+	.carousel-fade .carousel-inner > .item.active.right {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.carousel-fade .carousel-inner > .item.prev,
+	.carousel-fade .carousel-inner > .item.active.left {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.carousel-fade .carousel-inner > .item.next.left,
+	.carousel-fade .carousel-inner > .item.prev.right,
+	.carousel-fade .carousel-inner > .item.active {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+/* CSS Hack to trigger GPU for smooth transition */
+
+.covertext {
+	position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
+	top: 200px; /* The distance between the div with the top of document */
+	left: 0px; /* Make the div full width */
+	right: 0px; /* Make the div full width */
+}
+
+.title {
+	font-family: Verdana;
+	font-weight: 600;
+	font-size: 60px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.subtitle {
+	font-family: Verdana;
+	font-size: 23px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.explore {
+	margin-top: 100px;
+	text-align: center;
+	
+}
+
+.explore .btn-lg,
+.explore .btn-lg:hover {
+	border-radius: 30px;
+	padding: 15px 25px;
+	font-size: 22px;
+	background-image: none;
+	background-color: #ff4000;
+	border-color: #ff4000;
+	color: #ffffff;
+}
+
+.btn,
+.btn:hover {
+	border-radius: 0px;
+	background-image: none;
+	background-color: #ff4000;
+	border-color: #ff4000;
+	color: #ffffff;
+	margin-bottom: 20px;
+	box-shadow: none;
+	outline: none;
+	margin-top: -200px;
+	margin: 15px;
+	cursor: pointer;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+	color: #ffffff;
+	outline: none;
+}
+
+.imagemain {
+	padding-top: 700px;
+	background-image: url("/static/img/GoCeylon.52d5f465bb9a.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 40%;
+  
+}
+
+.buttons{
+	margin-top: -130px;
+}
+
+  .about-section {
+	background: url("/static/img/sea2.427c9258a379.jpg")
+	  no-repeat left;
+	background-size: 55%;
+	background-color: #fdfdfd;
+	overflow: hidden;
+	padding: 100px 0;
+  }
+  
+  .inner-container {
+	width: 55%;
+	float: right;
+	background-color: #e8f0ee;
+	padding: 130px;
+  }
+  
+  .inner-container h1 {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: 900;
+  }
+  
+  .text {
+	font-size: 16px;
+	color: #545454;
+	line-height: 30px;
+	text-align: justify;
+	margin-bottom: 40px;
+	font-weight: 600;
+  }
+  
+  .skills {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 700;
+	font-size: 13px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+	.inner-container {
+	  padding: 80px;
+	}
+
+	.imagemain {
+		padding-top: 800px;
+		background-image: url("/static/img/GoCeylon.52d5f465bb9a.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 45%;
+	  
+	  
+	}
+  }
+  
+  @media screen and (max-width: 1000px) {
+	.about-section {
+	  background-size: 100%;
+	  padding: 100px 40px;
+	}
+	.inner-container {
+	  width: 100%;
+	}
+
+	.imagemain {
+		padding-top: 800px;
+		background-image: url("/static/img/GoCeylon.52d5f465bb9a.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 70%;
+	  
+	  
+	}
+  }
+  
+  @media screen and (max-width: 720px) {
+	.about-section {
+		background-size: 100%;
+		padding: 60px 20px;
+	  }
+	  .inner-container {
+		padding: 30px;
+		padding-bottom: 5px;
+	  }
+	  
+  }
+  
+
+  @media only screen and (max-width: 720px) { 
+
+	.imagemain {
+		padding-top: 820px;
+		background: url("/static/img/GoCeylon.52d5f465bb9a.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 95%;
+	
+	}
+
+	.buttons{
+		margin-top: -280px;
+	}
+
+
+
+	.carousel .background.a {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.377), rgba(0, 0, 0, 0.048)),
+			url("/static/img/sea.999ed253f1f0.jpg");
+
+		margin-top: -120px;
+	}
+
+
+	.inner-container h1 {
+		margin-top: 10px;
+		margin-bottom: 15px;
+		font-size: 30px;
+		font-weight: 900;
+	  }
+
+} 

@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html{
+  background-image: url("/static/img/sigiri88.1e3035a7e27b.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+
+html{
+  height: 100%;
+  height: max-content;
+}
+
+body{
+  position: relative;
+  padding-bottom: 150px;
+  min-height: 100vh;
+}
+
+.title{
+  text-align: center;
+  font-family: 'Whitney', sans-serif;
+  font-weight:700;
+  color:rgb(255, 255, 255);
+  font-size:30px
+  
+}
+
+.step{
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Whitney', sans-serif;
+  font-weight:bold;
+  color:rgb(9, 107, 124);
+  font-size:28px;
+  opacity:1
+  
+}
+
+.link {
+  text-decoration:none;
+  color:rgb(0, 0, 0);
+  font-family: 'Whitney', sans-serif;
+  font-size:18px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom: 20px;
+  padding:10px 20px;
+  border:2px solid rgb(64, 107, 224);
+  border-radius:100px;
+  cursor: pointer;
+  display: block;
+}
+
+.filechooser{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.link:hover{
+  opacity:1;
+  background-color:#000f1d;
+  color: #ffffff;
+}
+
+.link2 {
+  text-decoration:none;
+  color:rgb(0, 0, 0);
+  font-family: 'Whitney', sans-serif;
+  font-size:18px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom: 20px;
+  padding:10px 20px;
+  border:2px solid rgb(64, 107, 224);
+  border-radius:100px;
+  cursor: pointer;
+  display: block;
+}
+
+.link2:hover{
+  opacity:1;
+  background-color:#000f1d;
+  color: #ffffff;
+}
+
+
+
+
+.instructions{
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Whitney', sans-serif;
+  font-weight:650;
+  color:rgb(0, 0, 0);
+  font-size:18px;
+}
+
+.process-element{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  font-family: 'Whitney', sans-serif;
+  font-weight:650;
+  color:rgb(0, 0, 0);
+  font-size:15px;
+}
+
+.title{
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.step1{
+  padding-top: 10px;
+}
+
+.step2{
+  padding-top: 20px;
+}
+
+.info-list{
+  padding-top: 10px;
+  font-size:  0.9em;
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.info-list li {
+  color: #ff0000;
+  font-size: 15px;
+}
+
+
+.accuracy-info{
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-weight: bold;
+  color: rgb(9, 107, 124);
+  padding-top: 5px;
+  margin-bottom: 0;
+}
+
+.image-input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2rem 1.5rem;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  color: #5a5a5a;
+}
+
+.form-wrapper{
+  margin:auto;
+  position:relative;
+  width:44%;
+  height: auto;
+  margin-top: 60px;   
+  margin-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.945);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.24),
+      0 10px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.text-body{
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 1px;
+}
+
+.container > .dropdown {
+  align-self: center;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 33px;
+  width: 150px;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: white #f7f7f7 whitesmoke;
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown:before, .dropdown:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888888 transparent;
+  pointer-events: none;
+}
+
+.dropdown:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+
+.dropdown:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.dropdown-select {
+  position: relative;
+  width: 130%;
+  margin: 0;
+  padding: 6px 8px 6px 10px;
+  height: 33px;
+  line-height: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #323c42;
+  text-shadow: 0 1px white;
+  background: #f2f2f2; /* Fallback for IE 8 */
+  background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.dropdown-select:focus {
+  z-index: 3;
+  width: 100%;
+  color: #394349;
+  outline: 2px solid #49aff2;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: 2px;
+  cursor: pointer;
+}
+
+.dropdown-select > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1200px) {
+ 
+  .form-wrapper{
+    margin:auto;
+    width:90%;
+    height: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.945);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.24),
+        0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+}
+
+
+@media screen and (max-width: 1000px) {
+  .form-wrapper{
+    margin:auto;
+    width:90%;
+    height: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.945);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.24),
+        0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+
+}
+
+
+@media screen and (max-width: 720px) {
+  .form-wrapper{
+    margin:auto;
+    width:90%;
+    height: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 28px;
+    padding-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.945);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.24),
+        0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+ 
+}
+

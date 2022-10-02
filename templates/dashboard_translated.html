@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard2.css' %}" />
+   
+
+</head>
+
+<body>
+  <title>Translate</title>
+
+<div class="background">
+  <div class="form-wrapper">
+    <div class="title" style='color:black'>Here's Your Translation</div>
+    <hr>
+      
+        <div class="instructions process-element">{{ text }}</div>
+
+  </div>
+</div>
+</body>
+
+</html>
+{% endblock %}
+

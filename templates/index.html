@@ -1,0 +1,42 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon-32x32.png' %}" type="image/x-icon">
+
+</head>
+
+<body>
+    <section>
+        <div class="image"></div>
+    <div class="progress-bar">
+        <span class="bar">
+          <span class="progress"></span>
+        </span>
+    </div>
+    <div class="team">
+        <p style="text-align: center;">&copy; DES KOMOREBI</p>
+    </div>
+    </section>
+
+
+</body>
+
+
+    <script>
+
+        var timer = setTimeout(function(){
+            window.location="{% url 'home-view' %}"},1500);
+    
+    </script>
+
+</html>
+
